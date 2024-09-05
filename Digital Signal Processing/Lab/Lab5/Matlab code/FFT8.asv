@@ -1,0 +1,15 @@
+function X = FFT8(x)
+%N=length(x);
+N=8;
+k=0:N/2-1;
+twiddle_factor=exp(-1i*2*pi*k/N);
+
+x_even=x(1:2:N);
+x_odd=x(2:2:N);
+
+X0_FFT4=FFT4(x_even);
+X1_FFT4=FFT4(x_odd);
+
+
+end
+
